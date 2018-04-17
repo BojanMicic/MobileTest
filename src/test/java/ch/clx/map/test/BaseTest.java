@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeTest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
@@ -29,6 +30,7 @@ public class BaseTest {
         caps.setCapability("appActivity", "ch.clx.map.mdb.MainActivity");
         caps.setCapability("noReset", "true");
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     }
 

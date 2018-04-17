@@ -23,9 +23,13 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void testLogin() throws InterruptedException {
-        Thread.sleep(5000);
-        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View[2]/android.widget.Button").click();
-
+//        Thread.sleep(5000);
+        driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View[2]/android.widget.Button").click();
+//        Thread.sleep(5000);
+        driver.findElement(By.id("loginUsernameInput")).sendKeys("1121061509");
+        driver.findElement(By.id("passwordInput")).sendKeys("Appium123");
+        driver.findElement(By.id("smlSubmit")).click();
+        Thread.sleep(20000);
     }
 
     @AfterTest
